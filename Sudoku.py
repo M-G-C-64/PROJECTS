@@ -13,6 +13,7 @@ board = [
     [0,4,9,2,0,6,0,0,7]
 ]
 
+# Print board
 def output(b):
     for i in range(len(b)):
         if i%3 == 0 and i != 0:
@@ -28,6 +29,7 @@ def output(b):
                 print(b[i][j],end = ' ')
     print('                         \n                          ')
 
+# Check if its zero
 def is_empty(b):
     for i in range(len(b)):
         for j in range(len(b[0])):
@@ -35,6 +37,7 @@ def is_empty(b):
                 return(i,j) #i = row, j = column
     return None
 
+# Check if the number is correct
 def is_correct(b ,num, pos): #pos in form (row, column)
     for i in range(len(b)):
         if b[i][pos[1]] == num and pos[0] != i:
